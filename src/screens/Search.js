@@ -33,11 +33,11 @@ class Search extends Component {
                 {/*	List Product	*/}
                 <div className="products">
                     <div id="search-result">
-                        Kết quả tìm kiếm với sản phẩm <span>iPhone Xs Max 2 Sim - 256GB</span>
+                        Kết quả tìm kiếm với sản phẩm - <span>iPhone Xs Max 2 Sim - 256GB</span>
                     </div>
                     <div className="product-list card-deck">
-                        {this.state.productList.map((item, index) => 
-                            <ProductItem 
+                        {this.state.productList.map((item, index) =>
+                            <ProductItem
                                 key={index}
                                 _id={item._id}
                                 name={item.name}
@@ -55,8 +55,8 @@ class Search extends Component {
                         <li className="page-item"><Link className="page-link" to="#">2</Link></li>
                         <li className="page-item"><Link className="page-link" to="#">3</Link></li>
                         <li className="page-item"><Link className="page-link" to="#">Trang sau</Link></li>
-                    </ul> 
-                </div>                
+                    </ul>
+                </div>
             </>
         );
     }
