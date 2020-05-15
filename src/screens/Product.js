@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import api, {HOST} from '../configs/api';
+import api, { HOST } from '../configs/api';
 import { ADD_TO_CART } from '../redux/action';
 import { connect } from 'react-redux';
 
@@ -20,7 +20,6 @@ class Product extends Component {
     async getData() {
         const { productId } = this.props.match.params
         let response = await api.get('/product/details/' + productId);
-        
         this.setState({
             productData: response.data
         })
@@ -61,24 +60,24 @@ class Product extends Component {
                     </div>
                     <div id="product-body" className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12">
-                        <h3>Đánh giá về iPhone X 64GB</h3>
-                        <p>
-                            Màn hình OLED có hỗ trợ HDR là một sự nâng cấp mới của Apple thay vì màn hình LCD với IPS được tìm thấy trên iPhone 8 và iPhone 8 Plus đem đến tỉ lệ tương phản cao hơn đáng kể là 1.000.000: 1, so với 1.300: 1 ( iPhone 8 Plus ) và 1.400: 1 ( iPhone 8 ).
+                            <h3>Đánh giá về iPhone X 64GB</h3>
+                            <p>
+                                Màn hình OLED có hỗ trợ HDR là một sự nâng cấp mới của Apple thay vì màn hình LCD với IPS được tìm thấy trên iPhone 8 và iPhone 8 Plus đem đến tỉ lệ tương phản cao hơn đáng kể là 1.000.000: 1, so với 1.300: 1 ( iPhone 8 Plus ) và 1.400: 1 ( iPhone 8 ).
                         </p>
-                        <p>
-                            Màn hình OLED mà Apple đang gọi màn hình Super Retina HD có thể hiển thị tông màu đen sâu hơn. Điều này được thực hiện bằng cách tắt các điểm ảnh được hiển thị màu đen còn màn hình LCD thông thường, những điểm ảnh đó được giữ lại. Không những thế, màn hình OLED có thể tiết kiệm pin đáng kể.
+                            <p>
+                                Màn hình OLED mà Apple đang gọi màn hình Super Retina HD có thể hiển thị tông màu đen sâu hơn. Điều này được thực hiện bằng cách tắt các điểm ảnh được hiển thị màu đen còn màn hình LCD thông thường, những điểm ảnh đó được giữ lại. Không những thế, màn hình OLED có thể tiết kiệm pin đáng kể.
                         </p>
-                        <p>
-                            Cả ba mẫu iPhone mới đều có camera sau 12MP và 7MP cho camera trước, nhưng chỉ iPhone X và iPhone 8 Plus có thêm một cảm biến cho camera sau. Camera kép trên máy như thường lệ: một góc rộng và một tele. Vậy Apple đã tích hợp những gì vào camera của iPhone X?
+                            <p>
+                                Cả ba mẫu iPhone mới đều có camera sau 12MP và 7MP cho camera trước, nhưng chỉ iPhone X và iPhone 8 Plus có thêm một cảm biến cho camera sau. Camera kép trên máy như thường lệ: một góc rộng và một tele. Vậy Apple đã tích hợp những gì vào camera của iPhone X?
                         </p>
-                        <p>
-                            Chống rung quang học (OIS) là một trong những tính năng được nhiều hãng điện thoại trên thế giới áp dụng. Đối với iPhone X, hãng tích hợp chống rung này cho cả hai camera, không như IPhone 8 Plus chỉ có OIS trên camera góc rộng nên camera tele vẫn rung và chất lượng bức hình không đảm bảo.
+                            <p>
+                                Chống rung quang học (OIS) là một trong những tính năng được nhiều hãng điện thoại trên thế giới áp dụng. Đối với iPhone X, hãng tích hợp chống rung này cho cả hai camera, không như IPhone 8 Plus chỉ có OIS trên camera góc rộng nên camera tele vẫn rung và chất lượng bức hình không đảm bảo.
                         </p>
-                        <p>
-                            Thứ hai, ống kính tele của iPhone 8 Plus có khẩu độ f / 2.8, trong khi iPhone X có ống kính tele f / 2.2, tạo ra một đường cong nhẹ và có thể chụp thiếu sáng tốt hơn với ống kính tele trên iPhone X.
+                            <p>
+                                Thứ hai, ống kính tele của iPhone 8 Plus có khẩu độ f / 2.8, trong khi iPhone X có ống kính tele f / 2.2, tạo ra một đường cong nhẹ và có thể chụp thiếu sáng tốt hơn với ống kính tele trên iPhone X.
                         </p>
-                        <p>
-                            Portrait Mode là tính năng chụp ảnh xóa phông trước đây chỉ có với camera sau của iPhone 7 Plus, hiện được tích hợp trên cả iPhone 8 Plus và iPhone X. Tuy nhiên, nhờ sức mạnh của cảm biến trên mặt trước của iPhone X, Camera TrueDepth cũng có thể chụp với Potrait mode.
+                            <p>
+                                Portrait Mode là tính năng chụp ảnh xóa phông trước đây chỉ có với camera sau của iPhone 7 Plus, hiện được tích hợp trên cả iPhone 8 Plus và iPhone X. Tuy nhiên, nhờ sức mạnh của cảm biến trên mặt trước của iPhone X, Camera TrueDepth cũng có thể chụp với Potrait mode.
                         </p>
                         </div>
                     </div>
@@ -97,13 +96,13 @@ class Product extends Component {
                                 </div>
                                 <div className="form-group">
                                     <label>Nội dung:</label>
-                                    <textarea name="comm_details" required rows={8} className="form-control" defaultValue={""} />     
+                                    <textarea name="comm_details" required rows={8} className="form-control" defaultValue={""} />
                                 </div>
                                 <button type="submit" name="sbm" className="btn btn-primary">Gửi</button>
-                            </form> 
+                            </form>
                         </div>
                     </div>
-                    {/*	End Comment	*/}  
+                    {/*	End Comment	*/}
                     {/*	Comments List	*/}
                     <div id="comments-list" className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12">
@@ -156,15 +155,15 @@ class Product extends Component {
                     </div>
                     {/*	End Comments List	*/}
                 </div>
-                {/*	End Product	*/} 
+                {/*	End Product	*/}
                 <div id="pagination">
-                <ul className="pagination">
-                    <li className="page-item"><Link className="page-link" to="#">Trang trước</Link></li>
-                    <li className="page-item active"><Link className="page-link" to="#">1</Link></li>
-                    <li className="page-item"><Link className="page-link" to="#">2</Link></li>
-                    <li className="page-item"><Link className="page-link" to="#">3</Link></li>
-                    <li className="page-item"><Link className="page-link" to="#">Trang sau</Link></li>
-                </ul> 
+                    <ul className="pagination">
+                        <li className="page-item"><Link className="page-link" to="#">Trang trước</Link></li>
+                        <li className="page-item active"><Link className="page-link" to="#">1</Link></li>
+                        <li className="page-item"><Link className="page-link" to="#">2</Link></li>
+                        <li className="page-item"><Link className="page-link" to="#">3</Link></li>
+                        <li className="page-item"><Link className="page-link" to="#">Trang sau</Link></li>
+                    </ul>
                 </div>
             </>
         );

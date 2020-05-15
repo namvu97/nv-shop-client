@@ -19,32 +19,32 @@ class Router extends Component {
     render() {
         return (
             <BrowserRouter>
-            <Route path="" component={Header} />
-            <div id="body">
-                <div className="container">
-                    <Route path="" component={Menu} />
-                    <div className="row">
-                        <div id="main" className="col-lg-8 col-md-12 col-sm-12">
-                            <Route path="" component={Slider} />
-                            <Switch>
-                                <Route exact path="" component={Home} />
-                                <Route path="/product/:name.:productId" component={Product} /> 
-                                <Route path="/category/:name.:categoryId" component={Category} /> 
-                                <Route exact path="/cart" component={Cart} />
-                                <Route path="/cart/success" component={Success} />
-                                <Route path="/search" component={Search} />
-                            </Switch>
+                <Route path="/" component={Header} />
+                <div id="body">
+                    <div className="container">
+                        <Route path="/" component={Menu} />
+                        <div className="row">
+                            <div id="main" className="col-lg-8 col-md-12 col-sm-12">
+                                <Route path="" component={Slider} />
+                                <Switch>
+                                    <Route exact path="/" component={Home} />
+                                    <Route path="/product/:name.:productId" component={Product} />
+                                    <Route path="/category/:name.:categoryId" component={Category} />
+                                    <Route exact path="/cart" component={Cart} />
+                                    <Route path="/cart/success" component={Success} />
+                                    <Route path="/search" component={Search} />
+                                </Switch>
+                            </div>
+                            <Route path="" component={Sidebar} />
                         </div>
-                        <Route path="" component={Sidebar} />
                     </div>
                 </div>
-            </div>
-            <Route path="" component={Footer} />
-            {/* <Route path="/login" component={Login} />
+                <Route path="" component={Footer} />
+                {/* <Route path="/login" component={Login} />
             <Route path="/admin" component={SidebarAdmin} />
             <Route exact path="/admin" component={Admin} />
             <Route path="/admin" component={User} /> */}
-        </BrowserRouter>
+            </BrowserRouter>
         );
     }
 }

@@ -8,7 +8,7 @@ const ProductItem = (props) => {
 
     return (
         <div className="product-item card text-center">
-            <Link to={`/user/product/${name}.${_id}`}>
+            <Link to={`/product/${name}.${_id}`}>
                 <img alt="" src={`${HOST_IMAGE}${image}`} />
             </Link>
             <h4>
