@@ -17,8 +17,9 @@
     "redux": "^4.0.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
+    "build:production": "set \"CI=false\" && env-cmd --file .env.production yarn run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "serve -s build",
