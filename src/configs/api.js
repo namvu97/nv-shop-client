@@ -5,8 +5,9 @@ export const HOST_IMAGE = HOST + "/images/products/"
 
 const instance = axios.create({
     headers: {
+        Accept: "application/json",
         "Content-Type": "application/json",
-        // "Authenticate": "Token",
+        "Authenticate": "Token",
     },
     timeout: 2000,
     baseURL: `${HOST}/api`
