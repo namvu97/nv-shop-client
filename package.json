@@ -41,5 +41,5 @@
   "devDependencies": {
     "http-proxy-middleware": "^0.20.0"
   },
-  "proxy": "http://localhost:7000"
+  "proxy": "http://nvshop-server.herokuapp.com/"
 }
