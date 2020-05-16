@@ -32,17 +32,17 @@ class Menu extends Component {
                         <div id="menu" className="collapse navbar-collapse">
                             <ul>
                                 {
-                                    // this.state.menuData.map((item, index) => {
-                                    //     return (
-                                    //         <NavLink
-                                    //             key={index}
-                                    //             className="menu-item"
-                                    //             to={{ pathname: `/category/${item.name}.${item._id}`, }}
-                                    //         >
-                                    //             {item.name}
-                                    //         </NavLink>
-                                    //     )
-                                    // })
+                                    this.state.menuData.map((item, index) => {
+                                        return (
+                                            <NavLink
+                                                key={index}
+                                                className="menu-item"
+                                                to={{ pathname: `/category/${item.name}.${item._id}`, }}
+                                            >
+                                                {item.name}
+                                            </NavLink>
+                                        )
+                                    })
                                 }
                             </ul>
                         </div>

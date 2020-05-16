@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const HOST = process.env.HOST
+export const HOST = "http://nvshop-server.herokuapp.com"
 export const HOST_IMAGE = HOST + "/images/products/"
 
 const instance = axios.create({
